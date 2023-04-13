@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdapterActivity {
+public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.ViewHolderDestinasi>{
     private Context ctx;
     private ArrayList arrId, arrNPM, arrNama, arrProdi;
 
@@ -30,7 +30,7 @@ public class AdapterActivity {
     @NonNull
     @Override
     public ViewHolderDestinasi onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View varView = LayoutInflater.from(ctx).inflate(R.layout.list_item, parent, false);
+        View varView = LayoutInflater.from(ctx).inflate(R.layout.list_item_mahasiswa, parent, false);
         return new ViewHolderDestinasi(varView);
     }
 
@@ -108,4 +108,3 @@ public class AdapterActivity {
     }
 }
 
-}
